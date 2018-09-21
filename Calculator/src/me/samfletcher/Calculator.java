@@ -33,6 +33,9 @@ public class Calculator
             // Setting up variables to be used
             ArrayList<String> grouped = grouping(input);
             double sum = 0;
+            // Checking for one number input
+            if(grouped.size() == 1)
+                sum = Double.parseDouble(grouped.get(0));
             /*
              * Works with "PEMDAS"
              * (except without the "PE")
@@ -98,7 +101,7 @@ public class Calculator
                     }
                 }
             }
-            result = ""+sum;
+            result = "= "+sum;
         }
         return result;
     }
